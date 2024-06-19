@@ -13,3 +13,12 @@ for x in range(1):
     notas.append(resultado)
 
 print(notas)
+
+contador = 1
+while contador <= 3:
+    codigo_aluno = input("Matricula: ")
+    nota = float(input("Nota: "))
+    resultado = [codigo_aluno, int(nota)]
+    notas.append(resultado)
+    # contador = contador + 1
+    contador += 1
