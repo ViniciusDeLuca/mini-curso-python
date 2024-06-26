@@ -15,4 +15,5 @@ estudante = Estudante(
 )
 
 estudante.aprovar()
-print(estudante.aprovado)
+p1 = Pessoa.por_ano_nascimento(estudante.nome, estudante.idade)
+print(p1.idade)
