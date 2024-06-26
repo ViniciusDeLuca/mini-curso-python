@@ -1,4 +1,5 @@
 from pessoa import Pessoa
+from estudante import Estudante
 
 pessoa = Pessoa(
     nome="Vinicius",
@@ -6,4 +7,12 @@ pessoa = Pessoa(
     peso=73
 )
 
-print(pessoa.getNome())
+estudante = Estudante(
+    nome="Vinicius",
+    idade= 23,
+    peso= 73,
+    curso="POO"
+)
+
+estudante.aprovar()
+print(estudante.aprovado)

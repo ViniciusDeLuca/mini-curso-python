@@ -1,4 +1,4 @@
-class Pessoa():
+class Pessoa(object):
     def __init__(self, nome, idade, peso):
         self.nome = nome
         self.idade = idade
@@ -10,3 +10,6 @@ class Pessoa():
         
     def getNome(self):
         return self.nome
+    
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos")
