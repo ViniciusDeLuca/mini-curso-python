@@ -9,6 +9,7 @@ class Estudante(Pessoa):
     def __str__(self):
         return f"Estudante(nome={self.nome}, idade={self.idade}, peso={self.peso}, curso={self.curso}, aprovado={self.aprovado})"
     
+    # refere-se à instancia da classe
     def getCurso(self):
         return self.curso
     
@@ -25,11 +26,14 @@ class Estudante(Pessoa):
             self.aprovado = False
         return
     
+    # refere-se à classe
     @classmethod
     def por_ano_nascimento(cls, nome, ano_nascimento, peso, curso):
         idade = cls.ano_atual - ano_nascimento
         return cls(nome, idade, peso, curso)
     
+    # metodo estatico
+    # dentro do corpo nao pode utilizar a instancia da classe e nem a classe
     @staticmethod
     def gera_id():
         random = randint(1, 10000)
