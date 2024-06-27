@@ -1,4 +1,5 @@
 from pessoa import Pessoa
+from random import randint
 class Estudante(Pessoa):
     def __init__(self, nome, idade, peso, curso, aprovado=False):
         super().__init__(nome, idade, peso)
@@ -28,3 +29,8 @@ class Estudante(Pessoa):
     def por_ano_nascimento(cls, nome, ano_nascimento, peso, curso):
         idade = cls.ano_atual - ano_nascimento
         return cls(nome, idade, peso, curso)
+    
+    @staticmethod
+    def gera_id():
+        random = randint(1, 10000)
+        return random
