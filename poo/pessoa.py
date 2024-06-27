@@ -1,6 +1,6 @@
 from datetime import datetime
 class Pessoa(object):
-    ano_atual = str(datetime.now().year)
+    ano_atual = int(datetime.now().year)
     
     def __init__(self, nome, idade, peso):
         self.nome = nome
@@ -20,4 +20,4 @@ class Pessoa(object):
     @classmethod
     def por_ano_nascimento(cls, nome, ano_nascimento):
         idade = int(cls.ano_atual) - int(ano_nascimento)
-        return cls(nome, idade, 0)
+        return cls(nome, idade)

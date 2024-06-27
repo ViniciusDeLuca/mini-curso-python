@@ -15,5 +15,6 @@ estudante = Estudante(
 )
 
 estudante.aprovar()
-p1 = Pessoa.por_ano_nascimento(estudante.nome, estudante.idade)
+ano_nascimento = estudante.ano_atual - int(estudante.idade)
+p1 = estudante.por_ano_nascimento(estudante.nome, ano_nascimento, estudante.peso, estudante.curso)
 print(p1.idade)

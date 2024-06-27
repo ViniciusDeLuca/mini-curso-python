@@ -23,3 +23,8 @@ class Estudante(Pessoa):
         if self.aprovado:
             self.aprovado = False
         return
+    
+    @classmethod
+    def por_ano_nascimento(cls, nome, ano_nascimento, peso, curso):
+        idade = cls.ano_atual - ano_nascimento
+        return cls(nome, idade, peso, curso)
